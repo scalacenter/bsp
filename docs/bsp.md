@@ -1,4 +1,5 @@
 ---
+id: bsp
 title: Build Server Protocol
 ---
 
@@ -22,6 +23,7 @@ The Build Server Protocol aims to define common functionality that both build to
 language servers/editors (clients) understand. This common functionality enables tooling developers
 to provide their end users the best developer experience while supporting build tools and language
 servers with less effort and time.
+
 
 1. [Build Server Protocol](#build-server-protocol)
     1. [Motivation](#motivation)
@@ -43,23 +45,24 @@ servers with less effort and time.
             6. [Log message](#log-message)
             7. [Publish Diagnostics](#publish-diagnostics)
         2. [Workspace Build Targets Request](#workspace-build-targets-request)
-    7. [`DidChangeWatchedFiles` Notification](#didchangewatchedfiles-notification)
-        1. [Build Target Changed Notification](#build-target-changed-notification)
-        2. [Build Target Text Documents Request](#build-target-text-documents-request)
-        3. [Text Document Build Targets Request](#text-document-build-targets-request)
-        4. [Dependency Sources Request](#dependency-sources-request)
-        5. [Resources Request](#resources-request)
-        6. [Compile Request](#compile-request)
-        7. [Test Request](#test-request)
-        8. [Run Request](#run-request)
-    8. [Extensions](#extensions)
+        3. [Register File Watcher Request](#register-file-watcher-request)
+        4. [Cancel File Watcher Request](#cancel-file-watcher-request)
+        5. [Build Target Changed Notification](#build-target-changed-notification)
+        6. [Build Target Text Documents Request](#build-target-text-documents-request)
+        7. [Text Document Build Targets Request](#text-document-build-targets-request)
+        8. [Dependency Sources Request](#dependency-sources-request)
+        9. [Resources Request](#resources-request)
+        10. [Compile Request](#compile-request)
+        11. [Test Request](#test-request)
+        12. [Run Request](#run-request)
+    7. [Extensions](#extensions)
         1. [Scala](#scala)
             1. [Scala Build Target](#scala-build-target)
             2. [Scalac Options Request](#scalac-options-request)
             3. [Scala Test Classes Request](#scala-test-classes-request)
             4. [Scala Main Classes Request](#scala-main-classes-request)
         2. [Sbt](#sbt)
-    9. [Appendix](#appendix)
+    8. [Appendix](#appendix)
         1. [Scala Bindings](#scala-bindings)
         2. [FAQ](#faq)
 
